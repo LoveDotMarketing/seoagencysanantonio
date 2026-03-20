@@ -1,0 +1,16 @@
+# robots.txt for seoagencysanantonio.com
+# SEO Agency LLC
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://seoagencysanantonio.com/sitemap.xml
+
+# Crawl-delay (optional, for polite bots)
+Crawl-delay: 1
+
+# Block common non-content paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$

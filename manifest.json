@@ -1,0 +1,22 @@
+{
+  "name": "SEO Agency San Antonio",
+  "short_name": "SEO Agency SA",
+  "description": "San Antonio's premier SEO agency delivering data-driven organic growth strategies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0D47A1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
