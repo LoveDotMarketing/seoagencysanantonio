@@ -1489,6 +1489,74 @@ address { font-style: normal; }
   gap: var(--space-2);
 }
 
+/* --- Review Platforms --- */
+.review-platforms {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background: var(--color-gray-50);
+}
+.review-platforms__grid {
+  display: grid;
+  gap: var(--space-6);
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .review-platforms__grid { grid-template-columns: repeat(3, 1fr); }
+}
+.review-platform-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-gray-800);
+  transition: all var(--transition-base);
+}
+.review-platform-card:hover {
+  border-color: var(--color-primary-lighter);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  color: var(--color-gray-800);
+}
+.review-platform-card strong {
+  font-size: var(--text-lg);
+}
+.review-platform-card__rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+/* --- Service Detail Related Links --- */
+.service-detail__related {
+  margin-top: var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+}
+.service-detail__related a {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* --- Team Card Bio --- */
+.team-card__bio {
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+  line-height: 1.6;
+  margin-top: var(--space-2);
+}
+.team-card__bio a {
+  color: var(--color-primary);
+}
+
 /* --- Print Styles --- */
 @media print {
   .top-bar, .header, .nav__cta, .footer__social, .cta { display: none; }
