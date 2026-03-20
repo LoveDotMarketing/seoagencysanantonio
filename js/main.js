@@ -18,27 +18,47 @@
       document.body.style.overflow = isOpen ? '' : 'hidden';
     });
 
-    // Close on link click
+    // Close menu helper
+    function closeMenu() {
+      navMenu.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      // Close any open dropdowns
+      navMenu.querySelectorAll('.nav__item--dropdown.is-open').forEach(function (dd) {
+        dd.classList.remove('is-open');
+        var trigger = dd.querySelector('.nav__link');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    // Close on nav link click — exclude dropdown parent triggers
     navMenu.querySelectorAll('.nav__link').forEach(function (link) {
+      // Skip links that are dropdown triggers (direct child of .nav__item--dropdown)
+      if (link.parentElement && link.parentElement.classList.contains('nav__item--dropdown')) return;
       link.addEventListener('click', function () {
-        navMenu.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
+        closeMenu();
+      });
+    });
+
+    // Close when clicking a dropdown sub-link (these navigate to a page)
+    navMenu.querySelectorAll('.nav__dropdown a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        closeMenu();
+      });
+    });
+
+    // Dropdown toggle on mobile — Services link opens/closes dropdown without closing menu
+    navMenu.querySelectorAll('.nav__item--dropdown > .nav__link').forEach(function (trigger) {
+      trigger.addEventListener('click', function (e) {
+        if (window.innerWidth < 1024) {
+          e.preventDefault();
+          var parent = trigger.closest('.nav__item--dropdown');
+          parent.classList.toggle('is-open');
+          trigger.setAttribute('aria-expanded', parent.classList.contains('is-open'));
+        }
       });
     });
   }
-
-  // --- Dropdown Toggle (Mobile) ---
-  document.querySelectorAll('.nav__item--dropdown > .nav__link').forEach(function (trigger) {
-    trigger.addEventListener('click', function (e) {
-      if (window.innerWidth < 1024) {
-        e.preventDefault();
-        var parent = trigger.closest('.nav__item--dropdown');
-        parent.classList.toggle('is-open');
-        trigger.setAttribute('aria-expanded', parent.classList.contains('is-open'));
-      }
-    });
-  });
 
   // --- Header Scroll Shadow ---
   var header = document.getElementById('header');

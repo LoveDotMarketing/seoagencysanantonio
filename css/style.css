@@ -86,6 +86,7 @@
   --z-sticky: 200;
   --z-overlay: 300;
   --z-modal: 400;
+  --z-nav: 9999;
 }
 
 /* --- Reset & Base --- */
@@ -113,6 +114,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  padding-top: 72px;
 }
 
 img, video, svg {
@@ -315,12 +317,12 @@ address { font-style: normal; }
 
 /* --- Header / Navigation --- */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: var(--z-modal);
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #FFFFFF;
   border-bottom: 1px solid var(--color-gray-200);
   transition: box-shadow var(--transition-base);
 }
@@ -391,12 +393,12 @@ address { font-style: normal; }
   right: 0;
   top: 72px;
   bottom: 0;
-  background: var(--color-white);
+  background: #FFFFFF;
   padding: var(--space-6) var(--container-pad) var(--space-8);
   flex-direction: column;
   gap: var(--space-4);
   overflow-y: auto;
-  z-index: var(--z-modal);
+  z-index: 9999;
   border-top: 1px solid var(--color-gray-200);
 }
 .nav__menu.is-open { display: flex; }
