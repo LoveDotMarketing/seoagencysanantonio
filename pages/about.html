@@ -64,10 +64,7 @@
     <div class="container">
       <nav class="nav" aria-label="Primary navigation">
         <a href="/" class="nav__logo" aria-label="SEO Agency San Antonio - Home">
-          <span class="nav__logo-icon">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#0D47A1"/><path d="M10 25V11h5.5c1.4 0 2.5.3 3.3 1 .8.7 1.2 1.6 1.2 2.7 0 .8-.2 1.4-.6 2-.4.5-1 .9-1.7 1.1v.1c.9.1 1.6.5 2.1 1.1.5.6.8 1.4.8 2.3 0 1.3-.4 2.3-1.3 3-.9.7-2.1 1.1-3.6 1.1H10zm3-8.4h2.3c.7 0 1.3-.2 1.7-.5.4-.3.6-.8.6-1.4 0-.6-.2-1-.6-1.3-.4-.3-.9-.4-1.6-.4H13v3.6zm0 2.3v4.2h2.6c.8 0 1.4-.2 1.8-.5.4-.4.6-.9.6-1.6 0-.7-.2-1.2-.7-1.6-.4-.4-1.1-.5-1.9-.5H13z" fill="white"/><path d="M24 25l-3-4.5h1.5c.8 0 1.4-.2 1.9-.6.4-.4.7-1 .7-1.7 0-.7-.2-1.3-.7-1.7-.4-.4-1.1-.6-1.9-.6H21v-2h1.5c1.4 0 2.6.4 3.4 1.1.9.8 1.3 1.8 1.3 3.1 0 1-.3 1.9-.8 2.6-.5.7-1.2 1.2-2 1.5L27 25h-3z" fill="#64B5F6"/></svg>
-          </span>
-          <span class="nav__logo-text"><strong>SEO Agency</strong><small>San Antonio</small></span>
+          <img src="/images/love-logo.jpg" alt="Love Marketing - SEO Agency San Antonio" height="40" style="height:40px;width:auto;">
         </a>
         <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
           <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
@@ -75,7 +72,17 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="/pages/services.html" class="nav__link">Services</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <a href="/pages/services.html" class="nav__link" aria-haspopup="true" aria-expanded="false">Services</a>
+              <ul class="nav__dropdown" role="menu">
+                <li><a href="/pages/seo-services.html" role="menuitem">SEO Services</a></li>
+                <li><a href="/pages/local-seo.html" role="menuitem">Local SEO</a></li>
+                <li><a href="/pages/geo-services.html" role="menuitem">GEO Services</a></li>
+                <li><a href="/pages/web-design.html" role="menuitem">Web Design</a></li>
+                <li><a href="/pages/digital-marketing.html" role="menuitem">Digital Marketing</a></li>
+                <li><a href="/pages/content-marketing.html" role="menuitem">Content Marketing</a></li>
+              </ul>
+            </li>
             <li class="nav__item"><a href="/pages/about.html" class="nav__link nav__link--active" aria-current="page">About</a></li>
             <li class="nav__item"><a href="/pages/blog.html" class="nav__link">Blog</a></li>
             <li class="nav__item"><a href="/pages/contact.html" class="nav__link">Contact</a></li>
@@ -250,24 +257,28 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="/" class="footer__logo"><strong>SEO Agency</strong> San Antonio</a>
-          <p class="footer__about">SEO Agency LLC is San Antonio's premier search engine optimization company. We deliver data-driven SEO strategies that grow your organic traffic, rankings, and revenue.</p>
+          <a href="/" class="footer__logo"><strong>Love Marketing</strong> San Antonio</a>
+          <p class="footer__about">Love Marketing is San Antonio's premier digital marketing and SEO agency. We deliver data-driven strategies that grow your organic traffic, rankings, and revenue.</p>
         </div>
         <div class="footer__nav">
           <h3 class="footer__heading">Services</h3>
           <ul>
-            <li><a href="/pages/services.html#local-seo">Local SEO</a></li>
-            <li><a href="/pages/services.html#technical-seo">Technical SEO</a></li>
-            <li><a href="/pages/services.html#content-marketing">Content Marketing</a></li>
-            <li><a href="/pages/services.html#link-building">Link Building</a></li>
+            <li><a href="/pages/seo-services.html">SEO Services</a></li>
+            <li><a href="/pages/local-seo.html">Local SEO</a></li>
+            <li><a href="/pages/geo-services.html">GEO Services</a></li>
+            <li><a href="/pages/web-design.html">Web Design</a></li>
+            <li><a href="/pages/digital-marketing.html">Digital Marketing</a></li>
+            <li><a href="/pages/content-marketing.html">Content Marketing</a></li>
           </ul>
         </div>
         <div class="footer__nav">
           <h3 class="footer__heading">Company</h3>
           <ul>
             <li><a href="/pages/about.html">About Us</a></li>
+            <li><a href="/pages/case-studies.html">Case Studies</a></li>
             <li><a href="/pages/blog.html">Blog</a></li>
             <li><a href="/pages/contact.html">Contact</a></li>
+            <li><a href="/pages/free-consultation.html">Free Consultation</a></li>
           </ul>
         </div>
         <div class="footer__contact">
